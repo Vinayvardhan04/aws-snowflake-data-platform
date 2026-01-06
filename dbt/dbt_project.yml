@@ -1,0 +1,14 @@
+name: github_analytics
+version: 1.0
+config-version: 2
+
+profile: github_analytics
+
+model-paths: ["models"]
+
+models:
+  github_analytics:
+    staging:
+      materialized: view
+    marts:
+      materialized: table
