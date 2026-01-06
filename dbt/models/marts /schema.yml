@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fact_repo_activity_daily
+    description: "Daily aggregated repository-level GitHub activity"
+    columns:
+      - name: repo_name
+        description: "GitHub repository name"
+        tests:
+          - not_null
+
+      - name: event_date
+        description: "Date of the activity"
+        tests:
+          - not_null
+
+      - name: total_events
+        description: "Total number of GitHub events per repository per day"
+        tests:
+          - not_null
+
+  - name: fact_user_activity_daily
+    description: "Daily aggregated user-level GitHub activity"
+    columns:
+      - name: actor
+        description: "GitHub user who performed the activity"
+        tests:
+          - not_null
+
+      - name: event_date
+        description: "Date of the activity"
+        tests:
+          - not_null
+
+      - name: total_events
+        description: "Total number of GitHub events per user per day"
+        tests:
+          - not_null
