@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: fact_repo_activity_daily
+    description: Daily repository activity derived from unique GitHub events.
+    columns:
+      - name: repo_name
+        data_tests: [not_null]
+      - name: event_date
+        data_tests: [not_null]
+      - name: total_events
+        data_tests: [not_null]
+  - name: fact_user_activity_daily
+    description: Daily actor activity derived from unique GitHub events.
+    columns:
+      - name: actor
+        data_tests: [not_null]
+      - name: event_date
+        data_tests: [not_null]
+      - name: total_events
+        data_tests: [not_null]
